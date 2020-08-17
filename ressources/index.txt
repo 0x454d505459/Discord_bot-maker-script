@@ -1,0 +1,51 @@
+//required
+
+const Discord = require("discord.js")
+const client = new Discord.Client();
+const fs = require("fs")
+const ytdl = require("ytdl-core")
+const { CommandHandler } = require("djs-commands")
+
+
+
+
+//login
+
+client.login("NzA4NjY1Mjc3NjMzNjU4OTMw.XraqNA.MNAIX7pLTOv1kQKhh1rvfZf8y04")
+
+//events
+
+client.on('ready', () => {
+  client.user.setActivity('some help using d!help', { type: 'STREAMING' })
+  console.log(`Logged in as ${client.user.tag}!`);
+
+});
+
+//clases
+var { Client, MessageEmbed } = require('discord.js');
+
+//Commands manager
+
+const CH = new CommandHandler({
+    folder: __dirname + '/commands/',
+    prefix: ['d!', 'd/']
+  });
+
+
+client.on('message', message => {
+	if(message.channel.type === 'dm') return;
+    if(message.author.type === 'bot') return;
+    let args = message.content.split(" ");
+    let command = args[0];
+    let cmd = CH.getCommand(command);
+
+
+    if(!cmd) return;
+
+    try{
+        cmd.run(client,message,args)
+    }catch(e){
+        console.log(e)
+    }
+
+})
