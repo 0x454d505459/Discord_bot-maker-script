@@ -11,7 +11,7 @@ Make a simple bot out of a script!!
 * [ ] Your discord bot token
 
 ## Usage
-1 Clone this git with  ` git clone link `
+1 Clone this git with  ` git clone https://github.com/TheFourchette/Discord_bot-maker-script.git `
 2 cd into the *Discord_bot-maker-script* folder
 3 make `main.sh` executable `with chmod +x main.sh`
 4 run the script with *./main.sh*
