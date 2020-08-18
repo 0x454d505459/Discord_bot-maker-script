@@ -1,2 +1,1 @@
-worker: node shardsman.js
-custom: node shardsman.js
+worker: node index.js

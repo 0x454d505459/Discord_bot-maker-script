@@ -3,32 +3,30 @@
 const Discord = require("discord.js")
 const client = new Discord.Client();
 const fs = require("fs")
-const ytdl = require("ytdl-core")
-const { CommandHandler } = require("djs-commands")
 
+const { CommandHandler } = require("djs-commands")
+const token = require("./token.json")
+const prefix = require("./prefix.json")
 
 
 
 //login
 
-client.login("NzA4NjY1Mjc3NjMzNjU4OTMw.XraqNA.MNAIX7pLTOv1kQKhh1rvfZf8y04")
+client.login(token.TOKEN)
 
 //events
 
 client.on('ready', () => {
-  client.user.setActivity('some help using d!help', { type: 'STREAMING' })
   console.log(`Logged in as ${client.user.tag}!`);
 
 });
 
-//clases
-var { Client, MessageEmbed } = require('discord.js');
 
 //Commands manager
 
 const CH = new CommandHandler({
     folder: __dirname + '/commands/',
-    prefix: ['d!', 'd/']
+    prefix: [prefix.PREF]
   });
 
 

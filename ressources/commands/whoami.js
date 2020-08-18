@@ -10,9 +10,9 @@ module.exports = class bot {
         await message.delete();
         var embed = new MessageEmbed()
         .setDescription("**Who am I ?**","I am 3 things:")
-        .addField("*First*:", "I'm a `bot` made by NameUndefined")
+        .addField("*First*:", "I'm a `bot` made using NameUndefined's bot maker script")
         .addField("*Second*:", "I'm here to `serve` you")
-        .addField("*Last but not least*:", "I'm here to help you managing your servers")
+        .addField("*Last but not least*:", "I'm here to help you managing your small servers")
         .setColor("#33CC33")
         .setFooter("Requested by " + message.member.displayName)
         message.channel.send(embed)
