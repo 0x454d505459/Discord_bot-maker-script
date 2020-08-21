@@ -5,7 +5,7 @@ Make a simple Discord bot out of a script!!
 
 ## Requirements
 * [ ] Nodejs (if not install the script will install it for you)
-* [ ] Be on a *arch-based* linux distro
+* [ ] Be on a *linux* distro
 * [ ] Be a sudoer
 
 * [ ] Your discord bot token
@@ -18,9 +18,16 @@ Make a simple Discord bot out of a script!!
 
 
 ## Kow issues
-- delete previously made bot
-- only work on arch-based distros
 - if interupt script will not delete current bot
 
+## Issues that are no longer an issue AKA fixed issues
+ - no longer delete previously made bot
+ - now work on *debian* and *arch* based distro 
+
+## Latest features
+* [ ] Has now colors
+* [ ] Can now run bots
+* [ ] Other little things
+ 
 ## Disclaimer
 This was done in shell script, so please feel free to improve it and report bugs.
